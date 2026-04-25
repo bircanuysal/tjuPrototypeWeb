@@ -3,7 +3,7 @@ export class SubpageHero {
     this.layout = layout
   }
 
-  render({ title, image = '/bospng.png' }) {
+  render({ title, image = '/campus-placeholder.png' }) {
     return `
       <section class="subpage-hero">
         <div class="subpage-hero-shell" style="--subpage-hero-image: url('${image}')">

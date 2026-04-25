@@ -49,14 +49,22 @@ export class Layout {
     return `
       <nav class="${className}" aria-label="${label}">
         ${this.content.primaryNavItems
-          .map(
-            (item) => `
+          .map((item) => {
+            if (!item.groups) {
+              return `
+                <div class="nav-item">
+                  <a class="nav-link" href="${item.path}" data-route="${item.path}">${item.label}</a>
+                </div>
+              `
+            }
+
+            return `
               <div class="nav-item has-mega">
                 <a class="nav-link" href="${item.path}" data-route="${item.path}" aria-haspopup="true">${item.label}</a>
                 ${this.renderMegaMenu(item.intro, item.groups, item.ariaLabel)}
               </div>
-            `,
-          )
+            `
+          })
           .join('')}
       </nav>
     `
@@ -66,7 +74,7 @@ export class Layout {
     return `
       <a class="${className}" href="/" data-route="/" aria-label="${this.content.labels.homepage}">
         <span class="brand-mark">
-          <img src="/tjuLogo.png" alt="" />
+          <img src="/tju-logo.svg" alt="" />
         </span>
         <span class="brand-name">
           <strong>${this.content.brand.title}</strong>
