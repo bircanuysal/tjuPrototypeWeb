@@ -12,8 +12,8 @@ export class CouncilPage {
         </figure>
         <div class="council-copy">
           <h2>${member.name}</h2>
-          <p>${member.role}</p>
-          <a href="#">${member.bioLabel}</a>
+          ${member.role ? `<p>${member.role}</p>` : ''}
+          ${member.bioPath ? `<a href="${member.bioPath}" data-route="${member.bioPath}">Özgeçmiş için tıklayınız.</a>` : ''}
         </div>
       </article>
     `

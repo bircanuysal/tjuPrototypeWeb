@@ -14,6 +14,7 @@ export class RectoratePage {
           <h2>${person.role}</h2>
           <p>${person.name}</p>
           <a href="mailto:${person.email}">${person.email}</a>
+          ${person.bioPath ? `<a class="rectorate-bio-link" href="${person.bioPath}" data-route="${person.bioPath}">Özgeçmiş için tıklayınız.</a>` : ''}
         </div>
       </div>
     `

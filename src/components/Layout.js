@@ -105,6 +105,35 @@ export class Layout {
     `
   }
 
+  renderPortalOverlay() {
+    return `
+      <section class="portal-overlay" aria-hidden="true" aria-label="TJU portal bağlantıları">
+        <div class="portal-panel">
+          <button class="portal-close" type="button" aria-label="${this.content.portal.closeLabel}">×</button>
+          <div class="portal-brand">
+            <span class="brand-mark">
+              <img src="/tju-logo.svg" alt="" />
+            </span>
+            <strong>TJU</strong>
+          </div>
+          <div class="portal-content">
+            <p>${this.content.portal.title}</p>
+            <div class="portal-icon" aria-hidden="true">
+              <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="41" cy="27" r="13" stroke="white" stroke-width="4"/>
+                <path d="M19 68C23 52 31 45 41 45C51 45 59 52 63 68" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                <path d="M21 68H61" stroke="white" stroke-width="4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <nav class="portal-links" aria-label="TJU portal menüsü">
+              ${this.content.portal.links.map((label) => `<a href="#">${label}</a>`).join('')}
+            </nav>
+          </div>
+        </div>
+      </section>
+    `
+  }
+
   renderHeader() {
     return `
       <header class="site-header" aria-label="${this.content.labels.header}">
@@ -116,11 +145,13 @@ export class Layout {
         ${this.content.tools
           .map(
             (tool) => `
-              <button type="button" aria-label="${tool.label}">${tool.text}</button>
+              <button type="button" aria-label="${tool.label}" ${tool.label === 'Kullanıcı' ? 'data-portal-trigger' : ''}>${tool.text}</button>
             `,
           )
           .join('')}
       </div>
+
+      ${this.renderPortalOverlay()}
     `
   }
 

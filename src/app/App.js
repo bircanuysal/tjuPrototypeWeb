@@ -1,6 +1,7 @@
 import { Layout } from '../components/Layout.js'
 import { SubpageHero } from '../components/SubpageHero.js'
 import { AdministrativeStaffPage } from '../pages/AdministrativeStaffPage.js'
+import { BioPage } from '../pages/BioPage.js'
 import { ContactPage } from '../pages/ContactPage.js'
 import { ContentPage } from '../pages/ContentPage.js'
 import { CouncilPage } from '../pages/CouncilPage.js'
@@ -8,6 +9,7 @@ import { EngineeringDepartmentPage } from '../pages/EngineeringDepartmentPage.js
 import { EngineeringFacultyPage } from '../pages/EngineeringFacultyPage.js'
 import { HomePage } from '../pages/HomePage.js'
 import { InternationalPage } from '../pages/InternationalPage.js'
+import { OrganizationChartPage } from '../pages/OrganizationChartPage.js'
 import { ProspectiveStudentsPage } from '../pages/ProspectiveStudentsPage.js'
 import { RectoratePage } from '../pages/RectoratePage.js'
 import { InteractionService } from '../services/InteractionService.js'
@@ -43,6 +45,15 @@ export class App {
         },
       ]),
     )
+    const bioPageRoutes = Object.fromEntries(
+      this.content.bioProfiles.map((profile) => [
+        profile.path,
+        {
+          title: `${profile.pageTitle} | ${this.content.brand.title}`,
+          page: new BioPage(this.content, this.subpageHero, profile),
+        },
+      ]),
+    )
 
     return new Router(
       {
@@ -61,6 +72,11 @@ export class App {
         '/idari-personel': {
           title: `${this.content.administrativeStaff.pageTitle} | ${this.content.brand.title}`,
           page: new AdministrativeStaffPage(this.content, this.subpageHero),
+        },
+        '/organizasyon-semasi': {
+          title: `${this.content.organizationChart.pageTitle} | ${this.content.brand.title}`,
+          page: new OrganizationChartPage(this.content),
+          useSiteChrome: false,
         },
         '/iletisim': {
           title: `${this.content.contact.pageTitle} | ${this.content.brand.title}`,
@@ -83,6 +99,7 @@ export class App {
           useSiteChrome: false,
         },
         ...contentPageRoutes,
+        ...bioPageRoutes,
         ...engineeringDepartmentRoutes,
       },
       {

@@ -4,17 +4,58 @@ export class HomePage {
     this.layout = layout
   }
 
+  renderStatIcon(index) {
+    const icons = [
+      `<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="14" y="12" width="36" height="44" rx="4" stroke="white" stroke-width="3"/>
+        <path d="M22 24H42M22 34H42M22 44H34" stroke="white" stroke-width="3" stroke-linecap="round"/>
+      </svg>`,
+      `<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32 10L10 22H54L32 10Z" stroke="white" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M16 22V50M28 22V50M40 22V50M52 22V50" stroke="white" stroke-width="3" stroke-linecap="round"/>
+        <path d="M10 54H54" stroke="white" stroke-width="3" stroke-linecap="round"/>
+      </svg>`,
+      `<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="22" r="10" stroke="white" stroke-width="3"/>
+        <path d="M16 54C18.5 43 25 38 32 38C39 38 45.5 43 48 54" stroke="white" stroke-width="3" stroke-linecap="round"/>
+      </svg>`,
+      `<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="22" stroke="white" stroke-width="3"/>
+        <path d="M10 32H54M32 10C38 17 41 24 41 32C41 40 38 47 32 54C26 47 23 40 23 32C23 24 26 17 32 10Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>`,
+      `<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="12" width="44" height="40" rx="6" stroke="white" stroke-width="3"/>
+        <path d="M22 24H42M32 24V42M24 42H40" stroke="white" stroke-width="3" stroke-linecap="round"/>
+      </svg>`,
+    ]
+
+    return icons[index] || icons[0]
+  }
+
   render() {
     return `
       <main>
         <section id="hero" class="hero-section">
           <div class="hero-shell">
+            <div class="hero-slider" aria-label="TJU duyuru görselleri">
+              <div class="hero-slider-track">
+                <img
+                  class="hero-slide-image"
+                  src="/reference/54942c02-ba2a-42c4-ac8e-1f06d4c4edbe.jpg"
+                  alt="TJU yeni kampüs duyurusu"
+                />
+                <img
+                  class="hero-slide-image"
+                  src="/reference/04534356-cb95-4946-aeb7-ef1105b9ac6d.jpg"
+                  alt="TJU lisans programları duyurusu"
+                />
+              </div>
+              <div class="hero-slider-dots" aria-hidden="true">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
             ${this.layout.renderHeroNavigation()}
-            <h1>${this.content.hero.title}</h1>
-            <a class="hero-cta" href="#announcements">
-              <span>${this.content.hero.ctaText}</span>
-              <strong aria-hidden="true">${this.content.hero.ctaIcon}</strong>
-            </a>
           </div>
         </section>
 
@@ -65,9 +106,9 @@ export class HomePage {
             <div class="stats-grid">
               ${this.content.stats
                 .map(
-                  ([value, label, icon]) => `
+                  ([value, label], index) => `
                   <article class="stat-card">
-                    <span class="line-icon ${icon}" aria-hidden="true"></span>
+                    <span class="line-icon" aria-hidden="true">${this.renderStatIcon(index)}</span>
                     <strong>${value}</strong>
                     <p>${label}</p>
                   </article>
@@ -98,17 +139,33 @@ export class HomePage {
 
         <section class="wide-photo" aria-label="${this.content.labels.campusImage}"></section>
 
-        <section class="section gallery-section">
-          <div class="mini-gallery">
-            ${this.content.gallery
-              .map(
-                (item) => `
-                <figure class="gallery-tile">
-                  <span role="img" aria-label="${item}"></span>
-                </figure>
-              `,
-              )
-              .join('')}
+        <section class="section gallery-section" aria-label="${this.content.sectionTitles.galleryTitle}">
+          <div class="gallery-header">
+            <h2>${this.content.sectionTitles.galleryTitle}</h2>
+            <div class="gallery-controls" aria-label="${this.content.sectionTitles.galleryTitle} kontrolleri">
+              <button class="gallery-control" type="button" data-gallery-prev aria-label="Önceki görseller">
+                <span aria-hidden="true">‹</span>
+              </button>
+              <button class="gallery-control" type="button" data-gallery-next aria-label="Sonraki görseller">
+                <span aria-hidden="true">›</span>
+              </button>
+            </div>
+          </div>
+          <div class="gallery-viewport">
+            <div class="mini-gallery" data-gallery-track tabindex="0">
+              ${this.content.gallery
+                .map((item) => {
+                  const title = typeof item === 'string' ? item : item.title
+                  const image = typeof item === 'string' ? '/campus-placeholder.png' : item.image
+
+                  return `
+                  <figure class="gallery-tile">
+                    <img src="${image}" alt="${title}" />
+                  </figure>
+                `
+                })
+                .join('')}
+            </div>
           </div>
         </section>
       </main>

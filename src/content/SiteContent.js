@@ -23,6 +23,25 @@ export class SiteContent {
     { label: 'English', text: 'EN' },
   ]
 
+  static portal = {
+    title: 'Geleceğe Hazır<br />Bireyler İçin<br />Yenilikçi Eğitim',
+    closeLabel: 'Portal menüsünü kapat',
+    links: [
+      'MyTJU Portal',
+      'Uzaktan TJU',
+      'TJU Mail (Öğrenci)',
+      'TJU Mail (Personel)',
+      'Office 365',
+      'Moodle',
+      'Eduroam',
+      'Kütüphane Kataloğu',
+      'Mezun Portalı',
+      'EBYS',
+      'Akademik Faaliyet Raporlama',
+      'Web İçerik Yönetim Sistemi',
+    ],
+  }
+
   static hero = {
     title: 'Biz Hazırız! Öğrencilerimizi Bekliyoruz.',
     ctaText: "TJU'de<br />Neler Oluyor?",
@@ -33,6 +52,7 @@ export class SiteContent {
     announcementsEyebrow: 'Duyurular',
     announcementsTitle: "TJU'den Duyurular",
     statsTitle: 'Yeni Kampüsünde TJU',
+    galleryTitle: 'Kampüsten Kareler',
   }
 
   static links = {
@@ -48,18 +68,24 @@ export class SiteContent {
       tone: 'red',
     },
     {
-      date: '11 Nisan 2026',
-      title: 'Yeni Duyuru Sistemi Yayında | Kampüs İçi İletişimde Devrim',
+      date: '8 Nisan 2026',
+      title: 'Türk-Japon Bilim ve Teknoloji Üniversitesi Yeni Adresinde',
       tone: 'red',
     },
     {
-      date: '10 Nisan 2026-10 Nisan 2026',
-      title: 'Yeni Duyuru Sistemi Yayında | Kampüs İçi İletişimi Destekliyoruz',
+      date: '1 Nisan 2026-10 Nisan 2026',
+      title: 'Deprem Afeti Bilimi Programı için Program Koordinatörü Başvuruları Başladı',
       tone: 'red',
     },
   ]
 
   static news = [
+    {
+      title: "Japonya'ya Resmî Ziyaretler ve STS Forumu 2025 Katılımı",
+      body:
+        'Türk-Japon Bilim ve Teknoloji Üniversitesi (TJU) Rektörü Prof. Dr. Mustafa Verşan KÖK, üniversitenin kuruluş ve gelişim sürecine katkı sağlamak ve akademik ile kurumsal iş birliklerini güçlendirmek amacıyla, TJU Provost’u Prof. Dr. Hisakazu Mihara ile birlikte Ekim 2025’te Japonya’ya resmî bir ziyarette bulundu.',
+      image: '/reference/1_pp.jpg',
+    },
     {
       title: "TJU, Yeni Kampüsünde!",
       body:
@@ -68,7 +94,7 @@ export class SiteContent {
     },
     {
       title: 'TJU 4 Mühendislik Bölümü ile Eğitim Öğretime Başlıyor',
-      lead: 'Öğrenci deneyimini merkeze alan yaklaşım.',
+      lead: ' Türk-Japon Bilim ve Teknoloji Üniversitesi’nde eğitim, kuramsal bilgi ile uygulama ve sektör deneyimini bütünleştiren entegre bir model üzerine yapılandırılmıştır..',
       body:
         'Akademik ilgi, destek ve kampüs yaşamını güçlendiren uygulamalarımızla öğrencilerimizin yanında olmaya devam ediyoruz.',
       image: '/campus-placeholder.png',
@@ -93,18 +119,30 @@ export class SiteContent {
   }
 
   static gallery = [
-    'Araştırma',
-    'Seminer',
-    'Kampüs',
-    'Spor',
-    'Stüdyo',
-    'Laboratuvar',
-    'Konferans',
-    'Atölye',
-    'Salon',
-    'Deney',
-    'Yaşam',
-    'Keşif',
+    {
+      title: 'Kütüphane',
+      image: '/reference/kutuphane_image_07.jpg',
+    },
+    {
+      title: 'Kampüs',
+      image: '/reference/barinma_image_02.jpg',
+    },
+    {
+      title: 'Kütüphane Girişi',
+      image: '/reference/kutuphane_image_01.jpg',
+    },
+    {
+      title: 'Kampüs Meydanı',
+      image: '/reference/Adsız tasarım copy.png',
+    },
+    {
+      title: 'Ana Yerleşke',
+      image: '/reference/Adsız tasarım.png',
+    },
+    {
+      title: 'Kampüs Binası',
+      image: '/reference/Buroşür 1     (190).jpg',
+    },
   ]
 
   static audienceLinks = [
@@ -350,6 +388,306 @@ export class SiteContent {
       ],
       links: ['Aydınlatma Metinleri', 'Başvuru Formu', 'Veri Güvenliği Politikası'],
     },
+    {
+      path: '/akademik-katalog',
+      pageTitle: 'Akademik Katalog',
+      heroTitle: 'Akademik<br />Katalog',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'Akademik katalog; TJU programlarının eğitim amaçları, ders yapıları, kredi bilgileri ve mezuniyet koşullarına ilişkin temel bilgileri bir araya getirir.',
+        'Öğrenciler ve aday öğrenciler, programların içeriklerini karşılaştırmak ve akademik planlarını oluşturmak için bu sayfadan yararlanabilir.',
+        'Katalog içerikleri akademik kurulların kararları ve güncel program düzenlemeleri doğrultusunda geliştirilebilir.',
+      ],
+      links: ['Program Bilgileri', 'Ders İçerikleri', 'Mezuniyet Koşulları'],
+    },
+    {
+      path: '/akademik-takvim',
+      pageTitle: 'Akademik Takvim',
+      heroTitle: 'Akademik<br />Takvim',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'Akademik takvim; kayıt, ders ekleme-bırakma, sınav, tatil ve mezuniyet süreçlerine ilişkin dönemsel tarihleri içerir.',
+        'TJU öğrencileri, akademik ve idari işlemlerini planlarken takvimde yer alan tarihleri esas alır.',
+        'Takvim bilgileri ilgili akademik yılın kararlarına göre güncellenebilir ve duyurularla desteklenir.',
+      ],
+      links: ['Güz Dönemi', 'Bahar Dönemi', 'Sınav Takvimi'],
+    },
+    {
+      path: '/acilan-dersler',
+      pageTitle: 'Açılan Dersler',
+      heroTitle: 'Açılan<br />Dersler',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'Açılan dersler sayfası, ilgili dönemde programlar kapsamında sunulan dersleri ve derslere ilişkin temel bilgileri paylaşır.',
+        'Ders listeleri öğrencilerin dönem planlaması, danışman görüşmeleri ve kayıt işlemleri için yol gösterici bir kaynak olarak hazırlanır.',
+        'Derslerin açılma durumu, kontenjan ve program ihtiyaçlarına göre dönem içinde değişebilir.',
+      ],
+      links: ['Lisans Dersleri', 'Lisansüstü Dersler', 'Ders Programları'],
+    },
+    {
+      path: '/ek-dal-programlari',
+      pageTitle: 'Ek Dal Programları',
+      heroTitle: 'Ek Dal<br />Programları',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'Ek dal programları, öğrencilerin ana programlarına ek olarak farklı akademik alanlarda yetkinlik kazanmasını destekler.',
+        'Program başvuru koşulları, ders yükümlülükleri ve başarı kriterleri ilgili akademik birimlerin kararları doğrultusunda belirlenir.',
+        'TJU, disiplinler arası öğrenmeyi teşvik eden esnek ve nitelikli akademik olanaklar sunmayı hedefler.',
+      ],
+      links: ['Başvuru Koşulları', 'Program Yapısı', 'Danışmanlık'],
+    },
+    {
+      path: '/akademik-kadro',
+      pageTitle: 'Akademik Kadro',
+      heroTitle: 'Akademik<br />Kadro',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'Akademik kadro sayfası, TJU bünyesinde eğitim, araştırma ve topluma katkı faaliyetlerini yürüten öğretim elemanlarını tanıtır.',
+        'Öğretim üyeleri ve araştırmacılar; uzmanlık alanları, yayınları, projeleri ve dersleriyle üniversitenin akademik üretimine katkı sağlar.',
+        'Kadro bilgileri akademik birimlerin güncel yapılanmasına göre düzenlenebilir.',
+      ],
+      links: ['Fakülteler', 'Bölümler', 'Araştırma Alanları'],
+    },
+    {
+      path: '/cift-ana-dal-yan-dal-programlari',
+      pageTitle: 'Çift Ana Dal / Yan Dal Programları',
+      heroTitle: 'Çift Ana Dal<br />Yan Dal Programları',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'Çift ana dal ve yan dal programları, başarılı öğrencilerin ikinci bir akademik alanda sistemli öğrenim görmesini sağlar.',
+        'Başvuru, kabul, devam ve mezuniyet koşulları ilgili yönetmelik ve akademik birim kararları çerçevesinde yürütülür.',
+        'Programlar öğrencilerin disiplinler arası bakış açısını güçlendirmek ve kariyer seçeneklerini genişletmek amacıyla tasarlanır.',
+      ],
+      links: ['Başvuru Takvimi', 'Koşullar', 'Program Listesi'],
+    },
+    {
+      path: '/akademik-ozgurluk-politikasi',
+      pageTitle: 'Akademik Özgürlük Politikası',
+      heroTitle: 'Akademik Özgürlük<br />Politikası',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'TJU, akademik özgürlüğü bilimsel üretimin, eleştirel düşüncenin ve nitelikli eğitimin temel unsurlarından biri olarak kabul eder.',
+        'Araştırma, öğretim ve ifade süreçleri; etik ilkeler, hukuki sorumluluklar ve kurumsal kalite yaklaşımıyla birlikte değerlendirilir.',
+        'Bu politika, akademik topluluğun özgür ve sorumlu biçimde bilgi üretmesini destekleyen çerçeveyi tanımlar.',
+      ],
+      links: ['Etik İlkeler', 'Araştırma Politikaları', 'Kurumsal Kalite'],
+    },
+    {
+      path: '/akademik-veri-yonetim-sistemi',
+      pageTitle: 'Akademik Veri Yönetim Sistemi',
+      heroTitle: 'Akademik Veri<br />Yönetim Sistemi',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'Akademik veri yönetim sistemi, üniversitenin yayın, proje, akademik performans ve araştırma çıktılarının düzenli biçimde izlenmesini destekler.',
+        'Sistem; raporlama, değerlendirme ve stratejik planlama süreçleri için güvenilir veri altyapısı oluşturmayı amaçlar.',
+        'Akademik birimler, güncel ve doğrulanabilir verilerle kurumsal gelişime katkı sağlar.',
+      ],
+      links: ['Yayınlar', 'Projeler', 'Raporlama'],
+    },
+    {
+      path: '/arastirma-tesvik-odulleri',
+      pageTitle: 'Araştırma Teşvik Ödülleri',
+      heroTitle: 'Araştırma Teşvik<br />Ödülleri',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'Araştırma teşvik ödülleri, TJU akademik topluluğunun nitelikli bilimsel üretimini görünür kılmak ve desteklemek amacıyla yapılandırılır.',
+        'Yayın, proje, patent, iş birliği ve toplumsal etki gibi başlıklarda yürütülen çalışmalar değerlendirme süreçlerine dahil edilebilir.',
+        'Teşvik mekanizmaları üniversitenin araştırma kapasitesini güçlendirmeye katkı sağlar.',
+      ],
+      links: ['Başvuru', 'Değerlendirme', 'Ödül Kategorileri'],
+    },
+    {
+      path: '/ogrenci-kongre-katilim-destegi',
+      pageTitle: 'Öğrenci Kongre Katılım Desteği',
+      heroTitle: 'Öğrenci Kongre<br />Katılım Desteği',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'Öğrenci kongre katılım desteği, öğrencilerin bilimsel toplantılarda çalışmalarını paylaşmasını ve akademik ağlarını geliştirmesini teşvik eder.',
+        'Destek başvuruları etkinlik niteliği, sunum durumu, akademik uygunluk ve bütçe olanakları çerçevesinde değerlendirilir.',
+        'Bu süreç öğrencilerin araştırma kültürüne erken aşamada katılımını güçlendirmeyi hedefler.',
+      ],
+      links: ['Başvuru Formu', 'Destek Koşulları', 'Sonuçlar'],
+    },
+    {
+      path: '/bilimsel-arastirma-projeleri',
+      pageTitle: 'Bilimsel Araştırma Projeleri',
+      heroTitle: 'Bilimsel Araştırma<br />Projeleri',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'Bilimsel araştırma projeleri, TJU akademisyenlerinin özgün araştırma fikirlerini sistemli biçimde geliştirmesine olanak sağlar.',
+        'Proje süreçleri; başvuru, değerlendirme, yürütme, raporlama ve çıktılar bakımından kurumsal ilkelerle desteklenir.',
+        'TJU, ulusal ve uluslararası araştırma iş birliklerini güçlendiren proje kültürünü önceliklendirir.',
+      ],
+      links: ['Proje Başvuruları', 'Yürütme Esasları', 'Raporlama'],
+    },
+    {
+      path: '/lisans-ogrencileri-arastirma-destegi',
+      pageTitle: 'Lisans Öğrencileri Araştırma Desteği',
+      heroTitle: 'Lisans Öğrencileri<br />Araştırma Desteği',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'Lisans öğrencileri araştırma desteği, öğrencilerin akademik merakını projeye dönüştürmesini ve araştırma deneyimi kazanmasını amaçlar.',
+        'Öğrenciler, akademik danışmanlarıyla birlikte araştırma sorusu geliştirme, yöntem belirleme ve çıktı üretme süreçlerine katılır.',
+        'Destek programı, TJU’nun araştırma odaklı eğitim yaklaşımını lisans düzeyinde görünür kılar.',
+      ],
+      links: ['Başvuru', 'Danışmanlık', 'Öğrenci Projeleri'],
+    },
+    {
+      path: '/360-sanal-tur',
+      pageTitle: '360 Sanal Tur',
+      heroTitle: '360 Sanal<br />Tur',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        '360 sanal tur, TJU kampüsünü ve üniversite yaşamını dijital ortamda keşfetmek isteyen ziyaretçiler için hazırlanır.',
+        'Aday öğrenciler, öğrenciler ve paydaşlar; eğitim alanları, sosyal mekanlar ve kampüs olanakları hakkında genel izlenim edinebilir.',
+        'Sanal tur içerikleri kampüs gelişimi ve yeni mekan düzenlemeleri doğrultusunda güncellenebilir.',
+      ],
+      links: ['Kampüs Alanları', 'Laboratuvarlar', 'Sosyal Mekanlar'],
+    },
+    {
+      path: '/spor-dostu-kampus-etkinliklerimiz',
+      pageTitle: 'Spor Dostu Kampüs Etkinliklerimiz',
+      heroTitle: 'Spor Dostu Kampüs<br />Etkinliklerimiz',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'Spor dostu kampüs etkinlikleri, öğrencilerin fiziksel iyi oluşunu ve kampüs içi sosyal etkileşimini destekleyen faaliyetleri kapsar.',
+        'Turnuvalar, açık alan etkinlikleri, takım çalışmaları ve farkındalık programları öğrencilerin aktif kampüs yaşamına katılımını artırır.',
+        'TJU, akademik başarıyı destekleyen dengeli bir yaşam kültürünü önemser.',
+      ],
+      links: ['Etkinlik Takvimi', 'Spor Alanları', 'Öğrenci Katılımı'],
+    },
+    {
+      path: '/kutuphane',
+      pageTitle: 'Kütüphane',
+      heroTitle: 'Kütüphane',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'TJU Kütüphanesi, eğitim ve araştırma süreçlerini basılı ve dijital kaynaklarla destekleyen akademik bir bilgi merkezidir.',
+        'Öğrenciler ve akademisyenler; çalışma alanları, veri tabanları, danışma hizmetleri ve kaynak erişimi olanaklarından yararlanabilir.',
+        'Kütüphane hizmetleri üniversitenin akademik gelişimiyle birlikte genişletilir.',
+      ],
+      links: ['Kaynaklar', 'Veri Tabanları', 'Çalışma Alanları'],
+    },
+    {
+      path: '/spor-tesisi',
+      pageTitle: 'Spor Tesisi',
+      heroTitle: 'Spor<br />Tesisi',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'Spor tesisi, öğrencilerin ve çalışanların sağlıklı yaşam alışkanlıklarını destekleyen kampüs olanaklarından biridir.',
+        'Tesis kullanımı, programlar ve etkinlikler üniversitenin sosyal yaşam planlaması kapsamında düzenlenir.',
+        'TJU, spor ve hareket kültürünü kampüs deneyiminin doğal bir parçası olarak görür.',
+      ],
+      links: ['Kullanım Bilgileri', 'Programlar', 'Etkinlikler'],
+    },
+    {
+      path: '/yurtlar',
+      pageTitle: 'Yurtlar',
+      heroTitle: 'Yurtlar',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'Yurtlar sayfası, öğrencilerin barınma olanakları ve kampüs yaşamına uyum süreçleri hakkında genel bilgi sunar.',
+        'Güvenli, erişilebilir ve destekleyici yaşam alanları öğrencilerin akademik ve sosyal gelişimine katkı sağlar.',
+        'Yurt hizmetleri başvuru dönemleri, kontenjanlar ve ilgili düzenlemeler doğrultusunda güncellenebilir.',
+      ],
+      links: ['Başvuru', 'Yaşam Alanları', 'Kurallar'],
+    },
+    {
+      path: '/ogrenci-topluluklari',
+      pageTitle: 'Öğrenci Toplulukları',
+      heroTitle: 'Öğrenci<br />Toplulukları',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'Öğrenci toplulukları, TJU öğrencilerinin akademik, kültürel, sosyal ve sportif alanlarda birlikte üretmesini destekler.',
+        'Topluluk faaliyetleri öğrencilerin liderlik, iletişim, takım çalışması ve proje geliştirme becerilerini güçlendirir.',
+        'TJU, öğrencilerin kampüs yaşamına aktif katılımını teşvik eden çoğulcu bir topluluk kültürü oluşturmayı hedefler.',
+      ],
+      links: ['Topluluk Listesi', 'Etkinlikler', 'Başvuru'],
+    },
+    {
+      path: '/bilim-projesi-takimlari',
+      pageTitle: 'Bilim Projesi Takımları',
+      heroTitle: 'Bilim Projesi<br />Takımları',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'Bilim projesi takımları, öğrencilerin mühendislik, teknoloji ve araştırma odaklı projelerde ekip halinde çalışmasını sağlar.',
+        'Takımlar; yarışmalar, prototip geliştirme, bilimsel üretim ve disiplinler arası uygulama süreçlerine katılabilir.',
+        'Bu yapı, öğrencilerin teorik bilgiyi gerçek problemlere uygulama becerisini destekler.',
+      ],
+      links: ['Takımlar', 'Projeler', 'Başarılar'],
+    },
+    {
+      path: '/uluslararasi-ogrenci-birlikleri',
+      pageTitle: 'Uluslararası Öğrenci Birlikleri',
+      heroTitle: 'Uluslararası Öğrenci<br />Birlikleri',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'Uluslararası öğrenci birlikleri, farklı kültürlerden gelen öğrencilerin kampüs yaşamına katılımını ve etkileşimini destekler.',
+        'Kültürel etkinlikler, tanışma programları ve öğrenci dayanışması faaliyetleri uluslararasılaşma yaklaşımının önemli parçasıdır.',
+        'TJU, Türkiye ve Japonya başta olmak üzere çok kültürlü bir öğrenme ortamı kurmayı önemser.',
+      ],
+      links: ['Etkinlikler', 'Öğrenci Destekleri', 'Kültürel Programlar'],
+    },
+    {
+      path: '/spor-takimlarimiz',
+      pageTitle: 'Spor Takımlarımız',
+      heroTitle: 'Spor<br />Takımlarımız',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'Spor takımları, öğrencilerin takım ruhu, disiplin ve temsil bilinci kazanmasına katkı sağlar.',
+        'Üniversite içi ve dışı organizasyonlara katılım, öğrencilerin sosyal gelişimini ve aidiyet duygusunu güçlendirir.',
+        'TJU, sportif başarıyı sağlıklı kampüs yaşamının tamamlayıcı bir unsuru olarak değerlendirir.',
+      ],
+      links: ['Takımlar', 'Antrenmanlar', 'Müsabakalar'],
+    },
+    {
+      path: '/kariyer-merkezi',
+      pageTitle: 'Kariyer Merkezi',
+      heroTitle: 'Kariyer<br />Merkezi',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'Kariyer Merkezi, öğrencilerin eğitimleri boyunca mesleki farkındalık geliştirmesini ve kariyer planlarını bilinçli biçimde oluşturmasını destekler.',
+        'Danışmanlık, etkinlik, sektör buluşmaları, staj ve iş olanaklarına yönelik çalışmalar kariyer gelişimi süreçlerinin temel başlıklarıdır.',
+        'TJU, öğrencilerin akademik bilgiyle birlikte profesyonel yetkinlikler kazanmasını önemser.',
+      ],
+      links: ['Kariyer Danışmanlığı', 'Staj', 'Sektör Buluşmaları'],
+    },
+    {
+      path: '/ogretme-ogrenme-merkezi',
+      pageTitle: 'Öğretme Öğrenme Merkezi',
+      heroTitle: 'Öğretme Öğrenme<br />Merkezi',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'Öğretme Öğrenme Merkezi, nitelikli öğretim uygulamalarını destekleyen ve öğrenme deneyimini geliştiren çalışmalar yürütür.',
+        'Merkez; öğretim yöntemleri, ölçme-değerlendirme, akademik destek ve eğitim teknolojileri alanlarında kaynak ve programlar sunabilir.',
+        'TJU’nun öğrenci odaklı eğitim yaklaşımı bu merkezin çalışmalarıyla güçlendirilir.',
+      ],
+      links: ['Eğitimler', 'Akademik Destek', 'Kaynaklar'],
+    },
+    {
+      path: '/surekli-egitim-merkezi',
+      pageTitle: 'Sürekli Eğitim Merkezi',
+      heroTitle: 'Sürekli Eğitim<br />Merkezi',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'Sürekli Eğitim Merkezi, toplumun ve sektörlerin değişen ihtiyaçlarına yönelik yaşam boyu öğrenme programları geliştirmeyi amaçlar.',
+        'Mesleki gelişim, sertifika, kısa eğitim ve kurumlara özel programlar merkez faaliyetlerinin kapsamına girebilir.',
+        'TJU, üniversite bilgisini toplumla buluşturan esnek ve erişilebilir öğrenme modellerini destekler.',
+      ],
+      links: ['Programlar', 'Sertifikalar', 'Başvuru'],
+    },
+    {
+      path: '/ogrenci-gelisim-ve-psikolojik-danisma-merkezi',
+      pageTitle: 'Öğrenci Gelişim ve Psikolojik Danışma Merkezi',
+      heroTitle: 'Öğrenci Gelişim ve<br />Psikolojik Danışma Merkezi',
+      image: '/campus-placeholder.png',
+      paragraphs: [
+        'Öğrenci Gelişim ve Psikolojik Danışma Merkezi, öğrencilerin akademik, sosyal ve kişisel gelişim süreçlerine destek sunar.',
+        'Bireysel görüşmeler, grup çalışmaları, farkındalık etkinlikleri ve yönlendirme hizmetleri öğrencilerin iyi oluşunu güçlendirmeyi hedefler.',
+        'Merkez çalışmaları gizlilik, erişilebilirlik ve öğrenci odaklı destek ilkeleri doğrultusunda yürütülür.',
+      ],
+      links: ['Randevu', 'Atölyeler', 'Destek Hizmetleri'],
+    },
   ]
 
   static teduMenu = [
@@ -365,7 +703,7 @@ export class SiteContent {
     {
       title: 'Üniversite Yönetimi',
       links: [
-        ['Konsey', '/mutevelli-heyeti'],
+        ['Üniversite Konseyi', '/mutevelli-heyeti'],
         ['Rektörlük', '/rektorluk'],
         ['Öğrenci Koordinatörlüğü', '/ogrenci-koordinatorlugu'],
         ['İdari Personel', '/idari-personel'],
@@ -539,33 +877,20 @@ export class SiteContent {
   }
 
   static council = {
-    pageTitle: 'Konsey',
+    pageTitle: 'Üniversite Konseyi',
     image: '/campus-placeholder.png',
     members: [
-      {
-        name: 'S. Selçuk Pehlivanoğlu',
-        role: 'Başkan',
-        image: '/campus-placeholder.png',
-        bioLabel: 'Özgeçmiş için tıklayınız.',
-      },
-      {
-        name: 'A. Kartal Usluel',
-        role: 'Başkan Vekili',
-        image: '/campus-placeholder.png',
-        bioLabel: 'Özgeçmiş için tıklayınız.',
-      },
-      {
-        name: 'Prof. Dr. Ad Soyad',
-        role: 'Üye',
-        image: '/campus-placeholder.png',
-        bioLabel: 'Özgeçmiş için tıklayınız.',
-      },
-      {
-        name: 'Dr. Ad Soyad',
-        role: 'Üye',
-        image: '/campus-placeholder.png',
-        bioLabel: 'Özgeçmiş için tıklayınız.',
-      },
+      { name: 'Prof. Dr. Erol ÖZVAR', image: '/campus-placeholder.png', bioPath: '/ozgecmis/erol-ozvar' },
+      { name: 'İbrahim ŞENEL', image: '/campus-placeholder.png', bioPath: '/ozgecmis/ibrahim-senel' },
+      { name: 'Prof. Dr. İsmail YÜKSEK', image: '/campus-placeholder.png', bioPath: '/ozgecmis/ismail-yuksek' },
+      { name: 'Kiyoshi ARAKİ', image: '/campus-placeholder.png', bioPath: '/ozgecmis/kiyoshi-araki' },
+      { name: 'Prof. Dr. Lütfiye DURAK ATA', image: '/campus-placeholder.png', bioPath: '/ozgecmis/lutfiye-durak-ata' },
+      { name: 'Prof. Dr. Mehmet Naci İNCİ', image: '/campus-placeholder.png', bioPath: '/ozgecmis/mehmet-naci-inci' },
+      { name: 'Prof. Dr. Mesut GÜNER', image: '/campus-placeholder.png', bioPath: '/ozgecmis/mesut-guner' },
+      { name: 'Prof. Dr. Mustafa Verşan KÖK', image: '/campus-placeholder.png', bioPath: '/ozgecmis/mustafa-versan-kok' },
+      { name: 'Prof. Dr. Ryoji NOYORİ', image: '/campus-placeholder.png', bioPath: '/ozgecmis/ryoji-noyori' },
+      { name: 'Toichi SAKATA', image: '/campus-placeholder.png', bioPath: '/ozgecmis/toichi-sakata' },
+      { name: 'Prof. Dr. Yoichiro MATSUMOTO', image: '/campus-placeholder.png', bioPath: '/ozgecmis/yoichiro-matsumoto' },
     ],
   }
 
@@ -587,6 +912,88 @@ export class SiteContent {
 
   }
 
+  static organizationChart = {
+    pageTitle: 'Organizasyon Şeması',
+    heroTitle: 'Organizasyon<br />Şeması',
+    heroImage: '/campus-placeholder.png',
+    nav: [
+      ['TJU', '/tedu'],
+      ['Akademik', '/akademik'],
+      ['Araştırma', '/arastirma'],
+      ["TJU'ni Keşfet", '/teduyu-kesfet'],
+    ],
+    foundationUnits: ['Strateji ve Kalite Kurulu', 'Hukuk Müşavirliği', 'İç Denetim', 'Danışma Kurulları'],
+    rectorateUnits: ['Rektörlük Ofisi', 'Genel Sekreterlik', 'Kurumsal İletişim', 'Bilgi İşlem'],
+    groups: [
+      {
+        title: 'Akademik Birimler',
+        tone: 'academic',
+        items: [
+          'Mühendislik Fakültesi',
+          'Lisansüstü Programlar Enstitüsü',
+          'İngilizce Dil Okulu',
+          'Akademik Kurullar',
+          'Bölüm Başkanlıkları',
+        ],
+      },
+      {
+        title: 'Rektör Yardımcılığı',
+        subtitle: 'Eğitim',
+        tone: 'education',
+        items: [
+          'Öğrenci İşleri',
+          'Eğitim Planlama ve Destek Ofisi',
+          'Uluslararası Programlar Ofisi',
+          'Öğretme ve Öğrenme Merkezi',
+          'Kalite Komisyonu',
+        ],
+      },
+      {
+        title: 'Rektör Yardımcılığı',
+        subtitle: 'Araştırma',
+        tone: 'research',
+        items: [
+          'Araştırma ve Proje Ofisi',
+          'Teknoloji Transfer Ofisi',
+          'Girişimcilik ve İnovasyon',
+          'Laboratuvar Koordinasyonu',
+          'Kütüphane',
+        ],
+      },
+      {
+        title: 'Öğrenci Koordinatörlüğü',
+        tone: 'student',
+        items: [
+          'Öğrenci Gelişim ve Danışma',
+          'Sosyal ve Kültürel İşler',
+          'Öğrenci Toplulukları',
+          'Kariyer Merkezi',
+          'Yurt ve Yaşam Hizmetleri',
+        ],
+      },
+      {
+        title: 'İdari Birimler',
+        tone: 'administrative',
+        items: [
+          'İdari ve Mali İşler',
+          'İnsan Kaynakları',
+          'Yapı İşleri',
+          'Satın Alma',
+          'Sağlık, Kültür ve Spor',
+        ],
+      },
+    ],
+    legend: [
+      ['Üst yönetim', 'leadership'],
+      ['Akademik birimler', 'academic'],
+      ['Eğitim', 'education'],
+      ['Araştırma', 'research'],
+      ['Öğrenci ve idari hizmetler', 'administrative'],
+    ],
+    footerLinks: ['Sıkça Sorulan Sorular', 'Kişisel Verilerin Korunması', 'Gizlilik Politikası', 'Sorumluluk Reddi'],
+    copyright: '© Türk-Japon Bilim ve Teknoloji Üniversitesi.',
+  }
+
   static rectorate = {
     pageTitle: 'Rektörlük',
     people: [
@@ -595,18 +1002,21 @@ export class SiteContent {
         name: 'Prof. Dr. Mustafa Verşan Kök',
         email: 'rektorluk@tedu.edu.tr',
         image: '/campus-placeholder.png',
+        bioPath: '/ozgecmis/mustafa-versan-kok',
       },
       {
         role: 'Provost',
         name: 'Prof. Dr. Ad Soyad',
         email: 'provost@tju.edu.tr',
         image: '/campus-placeholder.png',
+        bioPath: '/ozgecmis/provost-ad-soyad',
       },
       {
         role: 'Rektör Danışmanı',
         name: 'Dr. Ad Soyad',
         email: 'danisman@tju.edu.tr',
         image: '/campus-placeholder.png',
+        bioPath: '/ozgecmis/rektor-danismani-ad-soyad',
       },
     ],
     officeTitle: 'Özel Kalem Müdürü',
@@ -615,6 +1025,98 @@ export class SiteContent {
     phones: ['0 (312) 585 0006', '0 (312) 585 0011 - 585 0009'],
     image: '/campus-placeholder.png',
   }
+
+  static bioProfiles = [
+    {
+      path: '/ozgecmis/erol-ozvar',
+      name: 'Prof. Dr. Erol ÖZVAR',
+      role: 'Üniversite Konseyi Üyesi',
+      image: '/campus-placeholder.png',
+    },
+    {
+      path: '/ozgecmis/ibrahim-senel',
+      name: 'İbrahim ŞENEL',
+      role: 'Üniversite Konseyi Üyesi',
+      image: '/campus-placeholder.png',
+    },
+    {
+      path: '/ozgecmis/ismail-yuksek',
+      name: 'Prof. Dr. İsmail YÜKSEK',
+      role: 'Üniversite Konseyi Üyesi',
+      image: '/campus-placeholder.png',
+    },
+    {
+      path: '/ozgecmis/kiyoshi-araki',
+      name: 'Kiyoshi ARAKİ',
+      role: 'Üniversite Konseyi Üyesi',
+      image: '/campus-placeholder.png',
+    },
+    {
+      path: '/ozgecmis/lutfiye-durak-ata',
+      name: 'Prof. Dr. Lütfiye DURAK ATA',
+      role: 'Üniversite Konseyi Üyesi',
+      image: '/campus-placeholder.png',
+    },
+    {
+      path: '/ozgecmis/mehmet-naci-inci',
+      name: 'Prof. Dr. Mehmet Naci İNCİ',
+      role: 'Üniversite Konseyi Üyesi',
+      image: '/campus-placeholder.png',
+    },
+    {
+      path: '/ozgecmis/mesut-guner',
+      name: 'Prof. Dr. Mesut GÜNER',
+      role: 'Üniversite Konseyi Üyesi',
+      image: '/campus-placeholder.png',
+    },
+    {
+      path: '/ozgecmis/mustafa-versan-kok',
+      name: 'Prof. Dr. Mustafa Verşan KÖK',
+      role: 'Rektör / Üniversite Konseyi Üyesi',
+      image: '/campus-placeholder.png',
+    },
+    {
+      path: '/ozgecmis/ryoji-noyori',
+      name: 'Prof. Dr. Ryoji NOYORİ',
+      role: 'Üniversite Konseyi Üyesi',
+      image: '/campus-placeholder.png',
+    },
+    {
+      path: '/ozgecmis/toichi-sakata',
+      name: 'Toichi SAKATA',
+      role: 'Üniversite Konseyi Üyesi',
+      image: '/campus-placeholder.png',
+    },
+    {
+      path: '/ozgecmis/yoichiro-matsumoto',
+      name: 'Prof. Dr. Yoichiro MATSUMOTO',
+      role: 'Üniversite Konseyi Üyesi',
+      image: '/campus-placeholder.png',
+    },
+    {
+      path: '/ozgecmis/provost-ad-soyad',
+      name: 'Prof. Dr. Ad Soyad',
+      role: 'Provost',
+      image: '/campus-placeholder.png',
+    },
+    {
+      path: '/ozgecmis/rektor-danismani-ad-soyad',
+      name: 'Dr. Ad Soyad',
+      role: 'Rektör Danışmanı',
+      image: '/campus-placeholder.png',
+    },
+  ].map((profile) => ({
+    ...profile,
+    pageTitle: `${profile.name} Özgeçmiş`,
+    heroTitle: `${profile.name}<br />Özgeçmiş`,
+    backLabel: 'Listeye geri dön',
+    backPath: profile.role.startsWith('Rektör') || profile.role === 'Provost' ? '/rektorluk' : '/mutevelli-heyeti',
+    paragraphs: [
+      `${profile.name}, Türk-Japon Bilim ve Teknoloji Üniversitesi ${profile.role} olarak üniversitenin akademik ve kurumsal gelişimine katkı sunmaktadır.`,
+      'Özgeçmiş bilgileri; eğitim, akademik ve mesleki deneyim, görevler, yayınlar, projeler ve kurumsal katkılar başlıklarında bu sayfada yayımlanmak üzere düzenlenebilir.',
+      'Bu alan, resmi özgeçmiş metni ve güncel bilgiler eklendiğinde aynı sayfa yapısı korunarak zenginleştirilecektir.',
+    ],
+  }))
 
   static administrativeStaff = {
     pageTitle: 'İdari Personel',
